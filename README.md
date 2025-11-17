@@ -23,13 +23,21 @@ O objetivo é aplicar técnicas modernas de CSS3, responsividade e construção 
 ## 📁 Estrutura das Pastas
 
 projeto-ong/
+
 │── index.html
+
 │── projetos.html
+
 │── cadastro.html
+
 │── css/
+
 │ └── style.css
+
 │── img/
+
 │── README.md
+
 ---
 
 ## 🧩 Componentes Criados
