@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projetos — Plataforma ONG</title>
+  <link rel="stylesheet" href="assets/css/entrega2.css">
+</head>
+<body class="site-bg">
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html">Nome da ONG</a>
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="filters card" aria-labelledby="filter-title">
+      <h2 id="filter-title">Filtrar por</h2>
+      <div class="tags">
+        <button class="badge">Educação</button>
+        <button class="badge">Saúde</button>
+        <button class="badge">Inclusão</button>
+      </div>
+    </section>
+
+    <section class="projects card" aria-labelledby="projects-title">
+      <h1 id="projects-title">Projetos</h1>
+      <div class="grid cols-3 gap-24 projects-grid">
+        <article class="project-card card">
+          <img src="assets/images/projetos/projeto1.png" alt="Projeto 1" loading="lazy">
+          <div class="card-body">
+            <h3>Projeto Educação Comunitária</h3>
+            <p>Oficinas, reforço escolar e atividades culturais.</p>
+            <div class="meta">
+              <span class="badge">Educação</span>
+              <span class="progress" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                <span class="progress-bar" style="width:30%"></span>
+              </span>
+            </div>
+            <div class="card-actions">
+              <a class="btn primary" href="cadastro.html">Participar</a>
+              <button class="btn outline" data-open-modal="donateModal">Doar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card">
+          <img src="assets/images/projetos/projeto2.png" alt="Projeto 2" loading="lazy">
+          <div class="card-body">
+            <h3>Projeto Inclusão Digital</h3>
+            <p>Capacitação em tecnologia para jovens.</p>
+            <div class="meta">
+              <span class="badge">Inclusão</span>
+              <span class="progress" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                <span class="progress-bar" style="width:60%"></span>
+              </span>
+            </div>
+            <div class="card-actions">
+              <a class="btn primary" href="cadastro.html">Participar</a>
+              <button class="btn outline" data-open-modal="donateModal">Doar</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano2"></span> Nome da ONG</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="donateModal" aria-hidden="true" role="dialog">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Fechar">✕</button>
+      <h2>Simular Doação</h2>
+      <p>Escolha o valor para simular a doação.</p>
+      <div class="donation-options grid cols-3 gap-16">
+        <button class="btn primary">R$ 20</button>
+        <button class="btn primary">R$ 50</button>
+        <button class="btn primary">R$ 100</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="assets/js/entrega2.js" defer></script>
+</body>
+</html>

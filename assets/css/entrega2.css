@@ -1,0 +1,174 @@
+
+/* Design system - Entrega II */
+/* Variables: colors (8), typographic scale (5 sizes), spacing scale (8/16/24/32/48/64) */
+:root{
+  /* Colors (neutras/profissionais) */
+  --color-primary-600: #0b5ed7;
+  --color-primary-400: #3b82f6;
+  --color-secondary-600: #064e3b;
+  --color-secondary-400: #16a34a;
+  --color-neutral-900: #0f172a;
+  --color-neutral-700: #374151;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-100: #f3f4f6;
+
+  /* Semantic */
+  --bg: var(--color-neutral-100);
+  --surface: #ffffff;
+  --muted: var(--color-neutral-700);
+  --accent: var(--color-primary-600);
+
+  /* Typography (5 sizes) */
+  --fs-1: 2.25rem; /* display */
+  --fs-2: 1.5rem;  /* h2 */
+  --fs-3: 1.125rem; /* h3 */
+  --fs-4: 1rem;    /* body */
+  --fs-5: 0.875rem; /* small */
+
+  /* Spacing scale */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* Layout and grid */
+  --container-width: 1200px;
+  --grid-gap: var(--space-24);
+  --max-columns: 12;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:var(--color-neutral-900);line-height:1.45}
+.container{max-width:var(--container-width);margin:0 auto;padding:var(--space-24)}
+
+/* Header */
+.site-header{background:var(--surface);border-bottom:1px solid #e6edf3;position:sticky;top:0;z-index:50}
+.header-grid{display:flex;align-items:center;justify-content:space-between;gap:var(--space-16)}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:var(--fs-3)}
+.nav .menu{display:flex;gap:var(--space-16);list-style:none;margin:0;padding:0;align-items:center}
+.nav .menu li a, .nav .menu button{background:none;border:0;color:var(--color-neutral-900);font-weight:600;cursor:pointer}
+.btn-hamburger{display:none;background:none;border:0;cursor:pointer}
+
+/* Main grid layout using CSS Grid */
+.main-grid{display:grid;grid-template-columns: 1fr 320px;gap:var(--grid-gap);align-items:start;padding:var(--space-24) 0}
+.side{position:relative}
+
+/* Grid utility: 12-column container */
+.grid{display:grid;gap:var(--space-16)}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+.cols-12{grid-template-columns:repeat(12,1fr)}
+.gap-16{gap:var(--space-16)}
+.gap-24{gap:var(--space-24)}
+
+/* Cards */
+card, .card{background:var(--surface);border-radius:8px;padding:var(--space-16);box-shadow:0 4px 12px rgba(15,23,42,0.04)}
+.card.small{padding:var(--space-8)}
+
+/* Typography */
+h1{font-size:var(--fs-1);margin:0 0 var(--space-16)}
+h2{font-size:var(--fs-2);margin:0 0 var(--space-12)}
+h3{font-size:var(--fs-3);margin:0 0 var(--space-12)}
+.lead{font-size:var(--fs-4);color:var(--muted)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;border:1px solid transparent;font-weight:700;cursor:pointer}
+.btn.primary{background:var(--accent);color:white;border-color:var(--accent)}
+.btn.outline{background:transparent;color:var(--accent);border-color:var(--accent)}
+.btn:disabled{opacity:0.6;cursor:not-allowed}
+
+/* Badges */
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;color:var(--accent);font-weight:600;border:1px solid rgba(11,110,253,0.08)}
+
+/* Progress */
+.progress{display:inline-block;background:#eef2f6;border-radius:999px;width:100%;height:12px;overflow:hidden}
+.progress-bar{display:block;height:100%;background:linear-gradient(90deg,var(--color-primary-400),var(--color-primary-600))}
+
+/* Forms */
+.form-group{display:flex;flex-direction:column;margin-bottom:var(--space-12)}
+input[type="text"],input[type="email"],input[type="tel"],input[type="date"],select,textarea{padding:10px;border:1px solid #e6edf3;border-radius:6px;font-size:var(--fs-4)}
+input:focus{outline:3px solid rgba(11,110,253,0.12);border-color:var(--accent)}
+
+/* form invalid visuals */
+input:invalid{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,0.06)}
+.invalid-feedback{display:none;color:#ef4444;font-size:var(--fs-5);margin-top:6px}
+input.invalid + .invalid-feedback{display:block}
+
+/* Team list */
+.team-list .team-item img{width:100%;height:auto;border-radius:6px;display:block}
+
+/* Doc list */
+.doc-list{list-style:none;padding:0;margin:0}
+.doc-list li{margin-bottom:8px}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(15,23,42,0.5);z-index:1000;padding:var(--space-24)}
+.modal[aria-hidden="false"]{display:flex}
+.modal-panel{background:var(--surface);padding:var(--space-24);border-radius:12px;max-width:760px;width:100;box-shadow:0 20px 60px rgba(2,6,23,0.3)}
+.modal-close{position:absolute;right:16px;top:16px;background:none;border:0;font-size:18px;cursor:pointer}
+
+/* Toast */
+.toast{position:fixed;right:var(--space-24);bottom:var(--space-24);min-width:220px;background:#111827;color:white;padding:12px 16px;border-radius:8px;display:none;z-index:1200}
+
+/* Responsive breakpoints (5) */
+@media (max-width:1200px){.container{padding:16px}}
+@media (max-width:1024px){.main-grid{grid-template-columns:1fr 300px}}
+@media (max-width:880px){
+  .main-grid{grid-template-columns:1fr}
+  .nav .menu{display:none}
+  .btn-hamburger{display:inline-block}
+  .menu[aria-hidden="false"]{display:block;position:absolute;left:16px;right:16px;top:64px;background:var(--surface);padding:16px;border-radius:8px;box-shadow:0 8px 30px rgba(2,6,23,0.08)}
+  .cols-3{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  :root{--fs-1:1.75rem;--fs-2:1.25rem}
+  .cols-4{grid-template-columns:1fr 1fr}
+}
+@media (max-width:420px){
+  .cols-4{grid-template-columns:1fr}
+  .btn{padding:8px 10px}
+}
+
+/* Accessibility helpers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Garante que tudo dentro da página respeite a largura da tela */
+* {
+  box-sizing: border-box;
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Ajuste de grid da seção institucional e equipe */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Cards institucionais e de equipe */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  width: 100%;
+}
+
+/* Correção de overflow */
+body, html {
+  overflow-x: hidden;
+}

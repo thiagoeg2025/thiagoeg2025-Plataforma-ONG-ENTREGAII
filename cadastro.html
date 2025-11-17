@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro — Plataforma ONG</title>
+  <link rel="stylesheet" href="assets/css/entrega2.css">
+</head>
+<body class="site-bg">
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html">Nome da ONG</a>
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card form-card">
+      <h1>Cadastro de Voluntário / Doador</h1>
+      <form id="formCadastro" novalidate>
+        <div class="grid cols-2 gap-16">
+          <label class="form-group">
+            <span>Nome completo *</span>
+            <input id="nome" name="nome" type="text" required minlength="2">
+            <span class="invalid-feedback">Informe o nome completo</span>
+          </label>
+          <label class="form-group">
+            <span>E-mail *</span>
+            <input id="email" name="email" type="email" required>
+            <span class="invalid-feedback">Informe um e-mail válido</span>
+          </label>
+          <label class="form-group">
+            <span>CPF *</span>
+            <input id="cpf" name="cpf" type="text" required maxlength="14" placeholder="000.000.000-00">
+            <span class="invalid-feedback">CPF inválido</span>
+***END***
+
+          </label>
+          <label class="form-group">
+            <span>Telefone</span>
+            <input id="telefone" name="telefone" type="tel" maxlength="15">
+            <span class="invalid-feedback">Telefone inválido</span>
+          </label>
+          <label class="form-group full">
+            <span>Endereço</span>
+            <input id="endereco" name="endereco" type="text">
+          </label>
+          <label class="form-group">
+            <span>CEP *</span>
+            <input id="cep" name="cep" type="text" required maxlength="9">
+            <span class="invalid-feedback">CEP inválido</span>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Enviar</button>
+          <button class="btn outline" type="reset">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano3"></span> Nome da ONG</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="assets/js/entrega2.js" defer></script>
+</body>
+</html>

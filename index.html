@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plataforma ONG — Início</title>
+  <meta name="description" content="Plataforma profissional para ONGs — Institucional, Projetos, Doações e Transparência.">
+  <link rel="stylesheet" href="assets/css/entrega2.css">
+</head>
+<body class="site-bg">
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <a class="brand" href="index.html">Nome da ONG</a>
+
+      <nav class="nav" role="navigation" aria-label="Menu principal">
+        <button class="btn-hamburger" id="btnHamb" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu">
+          <span class="hamb-box"><span class="hamb-inner"></span></span>
+        </button>
+
+        <ul class="menu" id="mainMenu">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-sub">
+            <button class="sub-toggle" aria-expanded="false">Institucional ▾</button>
+            <ul class="sub-menu" aria-label="submenu institucional" style="display:none;">
+              <li><a href="#missao">Missão & Valores</a></li>
+              <li><a href="#equipe">Equipe</a></li>
+              <li><a href="#relatorios">Relatórios</a></li>
+            </ul>
+          </li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid" id="main" role="main">
+    <section class="hero card" id="missao" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Conectar pessoas, transformar comunidades</h1>
+        <p class="lead">Plataforma completa para gestão de projetos, captação de recursos e transparência institucional.</p>
+        <div class="actions">
+          <a class="btn primary" href="projetos.html">Ver projetos</a>
+          <button class="btn outline" id="openDonate">Simular doação</button>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img src="assets/images/institucional/hero-placeholder.png" alt="" width="560" height="360">
+      </div>
+    </section>
+
+    <section class="institucional card" id="equipe" aria-labelledby="instit-title">
+      <h2 id="instit-title">Área Institucional</h2>
+      <div class="grid cols-3 gap-24">
+        <div class="card small">
+          <h3>Missão</h3>
+          <p>Transformar realidades através de educação, saúde e inclusão.</p>
+        </div>
+        <div class="card small">
+          <h3>Visão</h3>
+          <p>Ser referência em impacto social e governança.</p>
+        </div>
+        <div class="card small">
+          <h3>Valores</h3>
+          <p>Transparência, ética e colaboração.</p>
+        </div>
+      </div>
+
+      <h3>Histórico e conquistas</h3>
+      <p>Atuando desde 2010, atingimos mais de 10.000 beneficiários em projetos de educação.</p>
+
+      <h3>Equipe</h3>
+      <div class="grid cols-4 gap-16 team-list">
+        <div class="team-item card">
+          <img src="assets/images/institucional/person1.png" alt="Foto do colaborador" width="240" height="240">
+          <h4>Maria Silva</h4>
+          <p>Diretora Executiva</p>
+        </div>
+        <div class="team-item card">
+          <img src="assets/images/institucional/person2.png" alt="Foto do colaborador" width="240" height="240">
+          <h4>João Pedro</h4>
+          <p>Coordenador de Projetos</p>
+        </div>
+        <div class="team-item card">
+          <img src="assets/images/institucional/person3.png" alt="Foto do colaborador" width="240" height="240">
+          <h4>Ana Costa</h4>
+          <p>Gestora de Voluntariado</p>
+        </div>
+        <div class="team-item card">
+          <img src="assets/images/institucional/person4.png" alt="Foto do colaborador" width="240" height="240">
+          <h4>Lucas Rocha</h4>
+          <p>Analista de Dados</p>
+        </div>
+      </div>
+
+      <h3 id="relatorios">Relatórios de Transparência</h3>
+      <ul class="doc-list">
+        <li><a href="#">Relatório 2024 (PDF)</a></li>
+        <li><a href="#">Relatório 2023 (PDF)</a></li>
+      </ul>
+    </section>
+
+    <aside class="side card" aria-labelledby="comunica-title">
+      <h3 id="comunica-title">Comunicação</h3>
+      <div class="blog-preview">
+        <article class="mini-post">
+          <h4>Novas oficinas</h4>
+          <p>Iniciamos oficinas na comunidade X — saiba mais.</p>
+          <a class="link" href="#">Ler</a>
+        </article>
+      </div>
+
+      <h4>Newsletter</h4>
+      <form id="newsletterForm" class="form-inline">
+        <label class="sr-only" for="newsletterEmail">Email</label>
+        <input id="newsletterEmail" type="email" placeholder="seu@exemplo.com" required>
+        <button class="btn primary" type="submit">Assinar</button>
+      </form>
+
+      <h4>Documentos públicos</h4>
+      <ul class="doc-list">
+        <li><a href="#">Estatuto</a></li>
+        <li><a href="#">Ata de Reunião</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="ano"></span> Nome da ONG — Transparência e Impacto</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="donateModal" aria-hidden="true" role="dialog" aria-labelledby="donateTitle">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Fechar">✕</button>
+      <h2 id="donateTitle">Simular Doação</h2>
+      <p>Escolha o valor e simule uma doação (apenas demonstração).</p>
+      <div class="donation-options grid cols-3 gap-16">
+        <button class="btn primary">R$ 20</button>
+        <button class="btn primary">R$ 50</button>
+        <button class="btn primary">R$ 100</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/entrega2.js" defer></script>
+</body>
+</html>
