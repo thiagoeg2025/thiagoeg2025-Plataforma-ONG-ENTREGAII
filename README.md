@@ -16,7 +16,6 @@ O objetivo é aplicar técnicas modernas de CSS3, responsividade e construção 
   - Cards  
   - Navegação  
   - Estrutura de formulários  
-- Implementar um **menu responsivo** com submenu e versão mobile.
 
 ---
 
@@ -61,13 +60,7 @@ projeto-ong/
   - 48px  
   - 64px  
 
-### ✔ Layout Responsivo  
-- Grid principal com 12 colunas  
-- Breakpoints definidos para:
-  - Mobile
-  - Tablet
-  - Desktop
-  
+
 ### ✔ Componentes desenvolvidos  
 - Header com menu responsivo e submenu  
 - Cards para projetos  
@@ -83,14 +76,3 @@ projeto-ong/
 2. Abra o arquivo **index.html** diretamente no navegador.  
 3. Teste em diferentes tamanhos de tela.  
 
----
-
-## 📌 Observações  
-- Todo o CSS foi escrito de forma modular e organizado.  
-- O layout segue boas práticas de acessibilidade e contraste.  
-- O design system servirá de base para a Entrega III (JavaScript).
-
----
-
-## ✔ Status da Entrega  
-Entrega concluída com todos os requisitos obrigatórios.  
